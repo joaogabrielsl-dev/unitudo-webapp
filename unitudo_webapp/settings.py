@@ -110,7 +110,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+if not DEBUG:
+    EMAIL_BACKEND = 'sendgrid_backend.SendgridBackend'
+    SENDGRID_API_KEY = os.environ.get('SENDGRID_API_KEY')
+    # ESTA LINHA DEVE CORRESPONDER AO SEU REMETENTE VERIFICADO
+    DEFAULT_FROM_EMAIL = '4uni.unitudo@gmail.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
 AUTHENTICATION_BACKENDS = [
     'unitudo.backends.EmailBackend',  # Nosso backend de e-mail
     'django.contrib.auth.backends.ModelBackend', # O backend padrão, para manter o login do admin funcionando

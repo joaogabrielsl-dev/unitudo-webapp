@@ -13,16 +13,19 @@ def cadastro_view(request):
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
+            # Pega o nome completo diretamente do formulário validado
+            nome_usuario = form.cleaned_data.get('nome_completo')
+
+            # Salva o usuário no banco de dados
             form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Conta criada com sucesso para {username}! Você já pode fazer login.')
+
+            # Cria a mensagem de sucesso usando o nome que acabamos de pegar
+            messages.success(request, f"Conta criada com sucesso para {nome_usuario}! Você já pode fazer login.")
             return redirect('login')
     else:
         form = CustomUserCreationForm()
 
-    context = {'form': form}
-    return render(request, 'autenticacao/cadastro.html', context)
-
+    return render(request, 'autenticacao/cadastro.html', {'form': form})
 
 @login_required  # Garante que apenas usuários logados possam ver esta página
 def agenda_view(request):
