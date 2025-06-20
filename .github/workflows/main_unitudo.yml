@@ -76,4 +76,7 @@ jobs:
         with:
           app-name: 'unitudo'
           slot-name: 'Production'
+          post-deployment-action: |
+            python manage.py collectstatic --noinput
+            python manage.py migrate
           
