@@ -1,0 +1,1150 @@
+[
+  {
+    "model": "unitudo.universidade",
+    "pk": 1,
+    "fields": {
+      "nome": "ANCLIVEPA - FACULDADE ANCLIVEPA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 2,
+    "fields": {
+      "nome": "ANCLIVEPA SP - FACULDADE ANCLIVEPA SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 3,
+    "fields": {
+      "nome": "ANHANGUERA SP - CENTRO UNIVERSITÁRIO ANHANGUERA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 4,
+    "fields": {
+      "nome": "APM - FACULDADE DA ASSOCIAÇÃO MÉDICA PAULISTA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 5,
+    "fields": {
+      "nome": "CAM - CENTRO UNIVERSITÁRIO DAS AMÉRICAS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 6,
+    "fields": {
+      "nome": "CENTRO UNIVERSITÁRIO DE TECNOLOGIA CARLOS DRUMMOND DE ANDRADE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 7,
+    "fields": {
+      "nome": "CENTRO UNIVERSITÁRIO SUMARÉ"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 8,
+    "fields": {
+      "nome": "CENTRO UNIVERSITÁRIO UNIBTA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 9,
+    "fields": {
+      "nome": "CETRUS - FACULDADE CETRUS SANAR"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 10,
+    "fields": {
+      "nome": "CSEJCDA - CENTRO SUPERIOR DE ESTUDOS JURÍDICOS CARLOS DRUMMOND DE ANDRADE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 11,
+    "fields": {
+      "nome": "CTA - FACULDADE CTA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 12,
+    "fields": {
+      "nome": "DIEESE - ESCOLA DIEESE DE CIÊNCIAS DO TRABALHO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 13,
+    "fields": {
+      "nome": "EBRAMEC - ESCOLA BRASILEIRA DE MEDICINA CHINESA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 14,
+    "fields": {
+      "nome": "EDUCA+ - FACULDADE EDUCAMAIS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 15,
+    "fields": {
+      "nome": "EESP - ESCOLA DE ECONOMIA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 16,
+    "fields": {
+      "nome": "ESAMC - FACULDADE ESAMC SÃO PAULO - ESAMC"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 17,
+    "fields": {
+      "nome": "ESCOLA DA CIDADE - ESCOLA DA CIDADE - FACULDADE DE ARQUITETURA E URBANISMO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 18,
+    "fields": {
+      "nome": "ESCOLA SUPERIOR DE ARTES CÉLIA HELENA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 19,
+    "fields": {
+      "nome": "ESEG - ESCOLA SUPERIOR DE ENGENHARIA E GESTÃO DE SÃO PAULO - ESEG"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 20,
+    "fields": {
+      "nome": "ESNS-SP - ESCOLA SUPERIOR NACIONAL DE SEGUROS DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 21,
+    "fields": {
+      "nome": "ESP - ESCOLA DE SOCIOLOGIA E POLÍTICA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 22,
+    "fields": {
+      "nome": "ESPM - ESCOLA SUPERIOR DE PROPAGANDA E MARKETING"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 23,
+    "fields": {
+      "nome": "ESTÁCIO SÃO PAULO - CENTRO UNIVERSITÁRIO ESTÁCIO DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 24,
+    "fields": {
+      "nome": "FA-FAAP - CENTRO UNIVERSITÁRIO ARMANDO ALVARES PENTEADO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 25,
+    "fields": {
+      "nome": "FAATESP - FACULDADE ÁLVARES DE AZEVEDO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 26,
+    "fields": {
+      "nome": "FAB - FACULDADE ASSOCIADA BRASIL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 27,
+    "fields": {
+      "nome": "FAC-SP - FACULDADE DO COMÉRCIO DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 28,
+    "fields": {
+      "nome": "FACEPD - FACULDADE ESCOLA PAULISTA DE DIREITO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 29,
+    "fields": {
+      "nome": "FACULDADE ASSOCIADA BRASIL - EAD"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 30,
+    "fields": {
+      "nome": "FACULDADE DE CIÊNCIAS DA SAÚDE IGESP"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 31,
+    "fields": {
+      "nome": "FACULDADE DE CIÊNCIAS E TECNOLOGIA PASCHOAL DANTAS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 32,
+    "fields": {
+      "nome": "FACULDADE DE COMUNICAÇÃO E DESIGN \"OSWALDO CRUZ\""
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 33,
+    "fields": {
+      "nome": "FACULDADE DE ENSINO SUPERIOR PASCHOAL DANTAS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 34,
+    "fields": {
+      "nome": "FACULDADE DE TECNOLOGIA SAINT PAUL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 35,
+    "fields": {
+      "nome": "FACULDADE DE TEOLOGIA DE SÃO PAULO DA IGREJA PRESBITERIANA INDEPENDENTE DO BRASIL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 36,
+    "fields": {
+      "nome": "FACULDADE EVANGÉLICA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 37,
+    "fields": {
+      "nome": "FACULDADE FAGRAN - FACULDADE IBRA DA GRANDE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 38,
+    "fields": {
+      "nome": "FACULDADE FLAMINGO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 39,
+    "fields": {
+      "nome": "FACULDADE MESSIANICA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 40,
+    "fields": {
+      "nome": "FACULDADE PHORTE DE EDUCAÇÃO E TECNOLOGIA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 41,
+    "fields": {
+      "nome": "FACULDADE QUALITTAS - EAD"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 42,
+    "fields": {
+      "nome": "FACULDADE SEBRAE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 43,
+    "fields": {
+      "nome": "FACULDADE SEQÜENCIAL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 44,
+    "fields": {
+      "nome": "FACULDADE UNICESP"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 45,
+    "fields": {
+      "nome": "FADISP - FACULDADE AUTÔNOMA DE DIREITO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 46,
+    "fields": {
+      "nome": "FADITECH - FACULDADE DE DIREITO TECH DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 47,
+    "fields": {
+      "nome": "FAED - FACULDADE AUDEN EDUCACIONAL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 48,
+    "fields": {
+      "nome": "FAEP - FACULDADE DE EDUCAÇÃO PAULISTANA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 49,
+    "fields": {
+      "nome": "FAETEL - FACULDADE TEOLÓGICA DE CIÊNCIAS HUMANAS E SOCIAIS LOGOS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 50,
+    "fields": {
+      "nome": "FAETI - FACULDADE DE EDUCAÇÃO E TECNOLOGIA IRACEMA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 51,
+    "fields": {
+      "nome": "FAEV - FACULDADE EVOLUÇÃO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 52,
+    "fields": {
+      "nome": "FAGH - FACULDADE ANCLIVEPA DE GESTÃO E HUMANOLOGIA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 53,
+    "fields": {
+      "nome": "FAISP - FACULDADE INTERATIVA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 54,
+    "fields": {
+      "nome": "FAMESP - FACULDADE MÉTODO DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 55,
+    "fields": {
+      "nome": "FAMOSP - FACULDADE MOZARTEUM DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 56,
+    "fields": {
+      "nome": "FAOA - FACULDADE DE ODONTOLOGIA DA APCD"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 57,
+    "fields": {
+      "nome": "FAPCOM - FACULDADE PAULUS DE TECNOLOGIA E COMUNICAÇÃO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 58,
+    "fields": {
+      "nome": "FAPUGA - FACULDADE ANA CAROLINA PUGA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 59,
+    "fields": {
+      "nome": "FASESP - FACULDADE SESI-SP DE EDUCAÇÃO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 60,
+    "fields": {
+      "nome": "FASM - FACULDADE SANTA MARCELINA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 61,
+    "fields": {
+      "nome": "FASP - FACULDADE DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 62,
+    "fields": {
+      "nome": "FATAC - FACULDADE DE TECNOLOGIA ALPHA CHANNEL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 63,
+    "fields": {
+      "nome": "FATEC ITAQUERA - FACULDADE DE TECNOLOGIA DE ITAQUERA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 64,
+    "fields": {
+      "nome": "FATEC OSWALDO CRUZ - FACULDADE DE TECNOLOGIA OSWALDO CRUZ"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 65,
+    "fields": {
+      "nome": "FATEC SEBRAE - FACULDADE DE TECNOLOGIA SEBRAE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 66,
+    "fields": {
+      "nome": "FATEC ZONASUL - FACULDADE DE TECONOLOGIA DA ZONA SUL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 67,
+    "fields": {
+      "nome": "FATEC-SP - FACULDADE DE TECNOLOGIA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 68,
+    "fields": {
+      "nome": "FATEC-TT - FACULDADE DE TECNOLOGIA DO TATUAPÉ"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 69,
+    "fields": {
+      "nome": "FATEC-ZL - FACULDADE DE TECNOLOGIA ZONA LESTE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 70,
+    "fields": {
+      "nome": "FATECIPI - FACULDADE DE TECNOLOGIA DO IPIRANGA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 71,
+    "fields": {
+      "nome": "FATRI EAD - FACULDADE TRILÓGICA NOSSA SENHORA DE TODOS OS POVOS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 72,
+    "fields": {
+      "nome": "FAUP - FACULDADE UNIÃO PAULISTANA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 73,
+    "fields": {
+      "nome": "FAUSP - EAD - FACULDADE UNIDA DE SÃO PAULO - EAD"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 74,
+    "fields": {
+      "nome": "FAUSP - FACULDADE UNIDA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 75,
+    "fields": {
+      "nome": "FAZP - FACULDADE ZUMBI DOS PALMARES"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 76,
+    "fields": {
+      "nome": "FBL - FACULDADE BATISTA LOGOS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 77,
+    "fields": {
+      "nome": "FCBS - FRANKLINCOVEY BUSINESS SCHOOL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 78,
+    "fields": {
+      "nome": "FCE - FACULDADE CAMPOS ELÍSEOS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 79,
+    "fields": {
+      "nome": "FCI - FACULDADE CULTURA INGLESA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 80,
+    "fields": {
+      "nome": "FCL - FACULDADE CÁSPER LÍBERO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 81,
+    "fields": {
+      "nome": "FCMSCSP - FACULDADE DE CIÊNCIAS MÉDICAS DA SANTA CASA SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 82,
+    "fields": {
+      "nome": "FD - FACULDADE DOURADO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 83,
+    "fields": {
+      "nome": "FEASP - FACULDADE DE ENGENHARIA E AGRIMENSURA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 84,
+    "fields": {
+      "nome": "FEBASP - CENTRO UNIVERSITÁRIO BELAS ARTES DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 85,
+    "fields": {
+      "nome": "FECAP - CENTRO UNIVERSITÁRIO ÁLVARES PENTEADO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 86,
+    "fields": {
+      "nome": "FECS - FACULDADE DE EDUCAÇÃO EM CIÊNCIAS DA SAÚDE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 87,
+    "fields": {
+      "nome": "FEDUC - FACULDADE DO EDUCADOR"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 88,
+    "fields": {
+      "nome": "FEPAC - FACULDADE PAULISTA DE COMUNICAÇÃO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 89,
+    "fields": {
+      "nome": "FFIA - FACULDADE FIA DE ADMINISTRAÇÃO E NEGÓCIOS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 90,
+    "fields": {
+      "nome": "FGV DIREITO SP - ESCOLA DE DIREITO DE SÃO PAULO - FGV DIREITO SP"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 91,
+    "fields": {
+      "nome": "FGV-EAESP - ESCOLA DE ADMINISTRAÇÃO DE EMPRESAS DE SÃO PAULO - FGV EAESP"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 92,
+    "fields": {
+      "nome": "FGV/RI - FGV / ESCOLA DE RELAÇÕES INTERNACIONAIS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 93,
+    "fields": {
+      "nome": "FIAP - CENTRO UNIVERSITÁRIO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 94,
+    "fields": {
+      "nome": "FICS - FACULDADES INTEGRADAS CAMPOS SALLES"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 95,
+    "fields": {
+      "nome": "FICSAE - FACULDADE ISRAELITA DE CIÊNCIAS DA SAÚDE ALBERT EINSTEIN"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 96,
+    "fields": {
+      "nome": "FIMSP - FACULDADE INOVA MAIS DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 97,
+    "fields": {
+      "nome": "FINACI - FACULDADE FINACI"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 98,
+    "fields": {
+      "nome": "FIPECAFI - FACULDADE FIPECAFI"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 99,
+    "fields": {
+      "nome": "FIPEEES - ESCOLA DE ENSINO SUPERIOR DA FIPE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 100,
+    "fields": {
+      "nome": "FIPEP - FACULDADES INTEGRADAS IPEP"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 101,
+    "fields": {
+      "nome": "FMCG - FACULDADE DE MÚSICA CARLOS GOMES"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 102,
+    "fields": {
+      "nome": "FMSL - FACULDADE DE MÚSICA SOUZA LIMA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 103,
+    "fields": {
+      "nome": "FMU - CENTRO UNIVERSITÁRIO DAS FACULDADES METROPOLITANAS UNIDAS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 104,
+    "fields": {
+      "nome": "FOC - FACULDADES OSWALDO CRUZ"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 105,
+    "fields": {
+      "nome": "FPA - FACULDADE PAULISTA DE ARTES"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 106,
+    "fields": {
+      "nome": "FPCS - FACULDADE PAULISTA DE CIÊNCIAS DA SAÚDE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 107,
+    "fields": {
+      "nome": "FPD - FACULDADE PASCHOAL DANTAS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 108,
+    "fields": {
+      "nome": "FRB - FACULDADES INTEGRADAS RIO BRANCO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 109,
+    "fields": {
+      "nome": "FRM SP - FACULDADE ROBERTO MIRANDA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 110,
+    "fields": {
+      "nome": "FRS - FACULDADE RUDOLF STEINER"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 111,
+    "fields": {
+      "nome": "FSB - FACULDADE DE SÃO BENTO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 112,
+    "fields": {
+      "nome": "FTBSP - FACULDADE TEOLÓGICA BATISTA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 113,
+    "fields": {
+      "nome": "HOTEC - FACULDADE DE TECNOLOGIA EM HOTELARIA, GASTRONOMIA E TURISMO DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 114,
+    "fields": {
+      "nome": "IBECO - FACULDADE IBECO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 115,
+    "fields": {
+      "nome": "IBMEC SP - FACULDADE IBMEC SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 116,
+    "fields": {
+      "nome": "IBPTECH FACULDADE DE CIÊNCIAS FORENSES E TECNOLOGIA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 117,
+    "fields": {
+      "nome": "IED SP - ISTITUTO EUROPEO DI DESIGN"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 118,
+    "fields": {
+      "nome": "IFSP - INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 119,
+    "fields": {
+      "nome": "IMESP - FACULDADE IMESP MONITOR"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 120,
+    "fields": {
+      "nome": "IMPACTA - FACULDADE IMPACTA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 121,
+    "fields": {
+      "nome": "INSPER INSTITUTO DE ENSINO E PESQUISA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 122,
+    "fields": {
+      "nome": "INTELI - INSTITUTO DE TECNOLOGIA E LIDERANÇA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 123,
+    "fields": {
+      "nome": "INVENIO - INSTITUTO DE EDUCAÇÃO SUPERIOR E INOVAÇÃO INVENIO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 124,
+    "fields": {
+      "nome": "IPESSP - FACULDADE IPESSP"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 125,
+    "fields": {
+      "nome": "ISE VERA CRUZ - INSTITUTO SUPERIOR DE EDUCAÇÃO VERA CRUZ"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 126,
+    "fields": {
+      "nome": "ITESP - INSTITUTO SÃO PAULO DE ESTUDOS SUPERIORES"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 127,
+    "fields": {
+      "nome": "LSB - LINK SCHOOL OF BUSINESS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 128,
+    "fields": {
+      "nome": "LUMINA - FACULDADE LUMINA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 129,
+    "fields": {
+      "nome": "MACKENZIE - UNIVERSIDADE PRESBITERIANA MACKENZIE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 130,
+    "fields": {
+      "nome": "MÉLIÈS - FACULDADE MÉLIÈS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 131,
+    "fields": {
+      "nome": "PRIMUM - FACULDADE PRIMUM"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 132,
+    "fields": {
+      "nome": "PUCSP - PONTIFÍCIA UNIVERSIDADE CATÓLICA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 133,
+    "fields": {
+      "nome": "QUALITTAS - FACULDADE QUALITTAS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 134,
+    "fields": {
+      "nome": "RACINE - INSTITUTO RACINE DE EDUCAÇÃO SUPERIOR"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 135,
+    "fields": {
+      "nome": "SAO CAMILO - CENTRO UNIVERSITÁRIO SÃO CAMILO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 136,
+    "fields": {
+      "nome": "SENACSP - CENTRO UNIVERSITÁRIO SENAC"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 137,
+    "fields": {
+      "nome": "SENAI SP - FACULDADE SENAI SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 138,
+    "fields": {
+      "nome": "SINGULARIDADES/ISESP - INSTITUTO SUPERIOR DE EDUCAÇÃO DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 139,
+    "fields": {
+      "nome": "SINPAIN - FACULDADE SINPAIN"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 140,
+    "fields": {
+      "nome": "SPTECH - FACULDADE SÃO PAULO TECH SCHOOL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 141,
+    "fields": {
+      "nome": "TREVISAN - TREVISAN ESCOLA SUPERIOR DE NEGÓCIOS"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 142,
+    "fields": {
+      "nome": "UAM - UNIVERSIDADE ANHEMBI MORUMBI"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 143,
+    "fields": {
+      "nome": "UB - UNIVERSIDADE BRASIL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 144,
+    "fields": {
+      "nome": "UNASP - CENTRO UNIVERSITÁRIO ADVENTISTA DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 145,
+    "fields": {
+      "nome": "UNESP - UNIVERSIDADE ESTADUAL PAULISTA JÚLIO DE MESQUITA FILHO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 146,
+    "fields": {
+      "nome": "UNI-BAN - CENTRO UNIVERSITÁRIO UNI-BAN"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 147,
+    "fields": {
+      "nome": "UNIB - UNIVERSIDADE IBIRAPUERA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 148,
+    "fields": {
+      "nome": "UNICID - UNIVERSIDADE CIDADE DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 149,
+    "fields": {
+      "nome": "UNICSUL - UNIVERSIDADE CRUZEIRO DO SUL"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 150,
+    "fields": {
+      "nome": "UNIDRUMMOND - CENTRO UNIVERSITÁRIO CARLOS DRUMMOND DE ANDRADE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 151,
+    "fields": {
+      "nome": "UNIFAI - CENTRO UNIVERSITÁRIO ASSUNÇÃO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 152,
+    "fields": {
+      "nome": "UNIFESP - UNIVERSIDADE FEDERAL DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 153,
+    "fields": {
+      "nome": "UNIFIAM-FAAM - FIAM-FAAM - CENTRO UNIVERSITÁRIO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 154,
+    "fields": {
+      "nome": "UNINOVE - UNIVERSIDADE NOVE DE JULHO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 155,
+    "fields": {
+      "nome": "UNIP - UNIVERSIDADE PAULISTA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 156,
+    "fields": {
+      "nome": "UNIPAULISTANA - CENTRO UNIVERSITÁRIO PAULISTANA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 157,
+    "fields": {
+      "nome": "UNISA - UNIVERSIDADE SANTO AMARO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 158,
+    "fields": {
+      "nome": "UNISAN - CENTRO UNIVERSITÁRIO UNISAN"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 159,
+    "fields": {
+      "nome": "UNISANT'ANNA - CENTRO UNIVERSITÁRIO SANT¿ANNA"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 160,
+    "fields": {
+      "nome": "UNITEN CDA - CENTRO UNIVERSITÁRIO DE TECNOLOGIA E NEGÓCIOS CARLOS DRUMMOND DE ANDRADE"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 161,
+    "fields": {
+      "nome": "UNIVESP - FUNDAÇÃO UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 162,
+    "fields": {
+      "nome": "UNIÍTALO - CENTRO UNIVERSITÁRIO CATÓLICO ÍTALO BRASILEIRO"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 163,
+    "fields": {
+      "nome": "USJT - UNIVERSIDADE SÃO JUDAS TADEU"
+    }
+  },
+  {
+    "model": "unitudo.universidade",
+    "pk": 164,
+    "fields": {
+      "nome": "USP - UNIVERSIDADE DE SÃO PAULO"
+    }
+  }
+]

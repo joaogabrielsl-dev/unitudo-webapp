@@ -1,0 +1,88 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-br" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}UniTudo{% endblock %}</title>
+
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Link para nosso CSS personalizado -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body class="d-flex flex-column h-100">
+
+    <header>
+        <!-- Sua barra de navegação (<nav>...</nav>) vai aqui, sem alterações -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-unitudo-primary">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="{% url 'agenda' %}">
+                    <img src="{% static 'images/logo.png' %}" alt="UniTudo Logo" width="35" height="35" class="d-inline-block align-text-top me-2">
+                    UniTudo
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    {% if user.is_authenticated %}
+                        <!-- 1. Saudação como elemento independente -->
+                        <span class="navbar-text navbar-greeting">Olá, {{ user.nome_completo|default:user.username }}!</span>
+
+                        <!-- 2. Lista principal de funcionalidades -->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'agenda' %}">Minha Agenda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'parceiros_lista' %}">Parceiros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'caronas_lista' %}">Caronas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'minhas_caronas' %}">Minhas Caronas</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'moradias_lista' %}">Moradias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'minhas_moradias' %}">Minhas Moradias</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'eventos_lista' %}">Eventos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'meus_eventos' %}">Meus Eventos</a></li>
+                        </ul>
+
+                        <!-- 3. Lista para o botão de sair (mantém a posição à direita no desktop) -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <form class="d-inline navbar-logout-form" method="post" action="{% url 'logout' %}">
+                                    {% csrf_token %}
+                                    <button type="submit" class="nav-link">
+                                        Sair <i class="bi bi-box-arrow-right"></i>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+
+                    {% else %}
+                        <!-- Links para usuários não logados (continua o mesmo) -->
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                            <li class="nav-item"><a class="btn btn-primary" href="{% url 'cadastro' %}">Cadastre-se</a></li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-4 mb-5">
+        {% block content %}
+        <!-- O conteúdo de cada página será inserido aqui -->
+        {% endblock %}
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light border-top">
+        <div class="container text-center">
+            <span class="text-muted">© 2025 UniTudo. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>

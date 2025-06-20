@@ -1,0 +1,55 @@
+<!-- templates/moradias/moradia_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Moradias - UniTudo{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Moradias Anunciadas</h1>
+    <a href="{% url 'moradias_adicionar' %}" class="btn btn-success">Anunciar Moradia</a>
+</div>
+
+{% if messages %}{% for message in messages %}<div class="alert alert-success">{{ message }}</div>{% endfor %}{% endif %}
+
+<div class="card card-body mb-4">
+    <h5>Filtrar Moradias</h5>
+    <form method="get" class="row g-3 align-items-end">
+        <div class="col-md-4">
+            <label for="tipo" class="form-label">Tipo de Imóvel</label>
+            <select name="tipo" id="tipo" class="form-select">
+                <option value="">Todos os tipos</option>
+                {% for value, display in tipos_imovel %}
+                <option value="{{ value }}" {% if form_values.tipo == value %}selected{% endif %}>{{ display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="preco_maximo" class="form-label">Preço Máximo (R$)</label>
+            <input type="number" name="preco_maximo" id="preco_maximo" value="{{ form_values.preco_maximo }}" class="form-control" placeholder="Ex: 1500">
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-primary w-100">Filtrar</button>
+        </div>
+    </form>
+</div>
+
+<div class="row">
+    {% for moradia in moradias %}
+    <div class="col-md-6 col-lg-4 mb-4">
+        <div class="card h-100">
+            <img src="{{ moradia.get_first_foto_url }}" class="card-img-top" alt="Foto de {{ moradia.tipo_imovel }}" style="height: 220px; object-fit: cover;">
+            <div class="card-body">
+                <h5 class="card-title">{{ moradia.get_tipo_imovel_display }}</h5>
+                <p class="card-text text-muted">{{ moradia.endereco }}</p>
+                <h4 class="card-text">R$ {{ moradia.preco|floatformat:2 }}</h4>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'moradias_detalhe' moradia.pk %}" class="btn btn-primary w-100">Ver Detalhes</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p class="text-center lead">Nenhuma moradia encontrada com os filtros atuais.</p>
+    {% endfor %}
+</div>
+{% endblock %}

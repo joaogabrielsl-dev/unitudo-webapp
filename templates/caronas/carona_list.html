@@ -1,0 +1,52 @@
+<!-- templates/caronas/carona_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Caronas Disponíveis - UniTudo{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Caronas Disponíveis</h1>
+    <a href="{% url 'caronas_adicionar' %}" class="btn btn-success">Oferecer Carona</a>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+<div class="card card-body mb-4">
+    <h5>Buscar Carona</h5>
+    <form method="get" class="row g-3">
+        <div class="col-md-5">
+            <input type="text" name="origem" placeholder="Saindo de..." value="{{ origem_query }}" class="form-control">
+        </div>
+        <div class="col-md-5">
+            <input type="text" name="destino" placeholder="Indo para..." value="{{ destino_query }}" class="form-control">
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">Buscar</button>
+        </div>
+    </form>
+</div>
+
+{% if caronas %}
+    <div class="list-group">
+        {% for carona in caronas %}
+        <a href="{% url 'caronas_detalhe' carona.pk %}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ carona.origem }} → {{ carona.destino }}</h5>
+                <small>{{ carona.data_hora|date:"d/m/Y, H:i" }}</small>
+            </div>
+            <p class="mb-1">Ofertado por: {{ user.nome_completo|default:user.username }}</p>
+            <small>Vagas: {{ carona.vagas_disponiveis }} | Valor: R$ {{ carona.valor }}</small>
+        </a>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="text-center mt-5">
+        <p class="lead">Nenhuma carona encontrada com os filtros atuais.</p>
+        <p>Tente buscar por outros locais ou <a href="{% url 'caronas_lista' %}">ver todas as caronas</a>.</p>
+    </div>
+{% endif %}
+{% endblock %}

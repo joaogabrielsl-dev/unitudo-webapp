@@ -1,0 +1,25 @@
+<!-- templates/agenda/agenda_confirm_delete.html -->
+{% extends 'base.html' %}
+
+{% block title %}Confirmar Exclusão{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2>Confirmar Exclusão</h2>
+            </div>
+            <div class="card-body">
+                <p>Você tem certeza que deseja excluir o compromisso: <strong>"{{ compromisso.titulo }}"</strong>?</p>
+                <p class="text-danger">Esta ação não pode ser desfeita.</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Sim, tenho certeza</button>
+                    <a href="{% url 'agenda' %}" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

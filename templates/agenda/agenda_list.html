@@ -1,0 +1,45 @@
+<!-- templates/agenda/agenda_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Minha Agenda - UniTudo{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Minha Agenda Acadêmica</h1>
+    <a href="{% url 'agenda_adicionar' %}" class="btn btn-primary">Adicionar Compromisso</a>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+{% if compromissos %}
+    <div class="row">
+        {% for compromisso in compromissos %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ compromisso.titulo }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">
+                        {{ compromisso.get_tipo_display }} - {{ compromisso.data_hora|date:"d/m/Y, H:i" }}
+                    </h6>
+                    <p class="card-text">{{ compromisso.descricao|truncatewords:20 }}</p>
+                </div>
+                <div class="card-footer bg-transparent border-top-0">
+                    <a href="{% url 'agenda_editar' compromisso.pk %}" class="btn btn-sm btn-outline-secondary">Editar</a>
+                    <a href="{% url 'agenda_excluir' compromisso.pk %}" class="btn btn-sm btn-outline-danger">Excluir</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="text-center mt-5">
+        <p class="lead">Você ainda não tem nenhum compromisso agendado.</p>
+        <p>Que tal começar adicionando o primeiro?</p>
+        <a href="{% url 'agenda_adicionar' %}" class="btn btn-lg btn-success">Criar meu primeiro compromisso</a>
+    </div>
+{% endif %}
+{% endblock %}

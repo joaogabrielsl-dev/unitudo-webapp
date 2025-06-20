@@ -1,0 +1,28 @@
+<!-- templates/caronas/carona_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Detalhes da Carona - UniTudo{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h2>Carona de {{ carona.origem }} para {{ carona.destino }}</h2>
+        <h5 class="text-muted">Ofertada por: {{ carona.ofertante.username }}</h5>
+    </div>
+    <div class="card-body">
+        <p><strong>Data e Hora da Partida:</strong> {{ carona.data_hora|date:"d/m/Y, H:i" }}</p>
+        <p><strong>Vagas Disponíveis:</strong> {{ carona.vagas_disponiveis }}</p>
+        <p><strong>Valor por pessoa:</strong> R$ {{ carona.valor }}</p>
+        <hr>
+        <h5>Observações do motorista:</h5>
+        <p>{{ carona.observacoes|linebreaksbr }}</p>
+        <hr>
+        <div class="alert alert-success">
+            <strong>{{ carona.get_tipo_contato_display }}:</strong> {{ carona.valor_contato }}
+        </div>
+    </div>
+    <div class="card-footer">
+        <a href="{% url 'caronas_lista' %}" class="btn btn-secondary">Voltar para a lista de caronas</a>
+    </div>
+</div>
+{% endblock %}

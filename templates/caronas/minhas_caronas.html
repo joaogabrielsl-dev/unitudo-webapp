@@ -1,0 +1,43 @@
+<!-- templates/caronas/minhas_caronas.html -->
+{% extends 'base.html' %}
+
+{% block title %}Minhas Caronas - UniTudo{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Minhas Caronas Ofertadas</h1>
+    <a href="{% url 'caronas_adicionar' %}" class="btn btn-success">Oferecer Nova Carona</a>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+{% endif %}
+
+{% if caronas %}
+    <div class="list-group">
+        {% for carona in caronas %}
+        <div class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="{% url 'caronas_detalhe' carona.pk %}" class="text-decoration-none">
+                        <h5 class="mb-1">{{ carona.origem }} → {{ carona.destino }}</h5>
+                    </a>
+                    <p class="mb-1 text-muted">Partida em: {{ carona.data_hora|date:"d/m/Y, H:i" }}</p>
+                </div>
+                <div>
+                    <a href="{% url 'caronas_editar' carona.pk %}" class="btn btn-sm btn-outline-secondary me-2">Editar</a>
+                    <a href="{% url 'caronas_excluir' carona.pk %}" class="btn btn-sm btn-outline-danger">Excluir</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="text-center mt-5">
+        <p class="lead">Você ainda não ofereceu nenhuma carona.</p>
+        <p>Clique no botão acima para começar!</p>
+    </div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,25 @@
+<!-- templates/caronas/carona_confirm_delete.html -->
+{% extends 'base.html' %}
+
+{% block title %}Confirmar Exclusão da Carona{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card border-danger">
+            <div class="card-header bg-danger text-white">
+                <h2>Confirmar Exclusão</h2>
+            </div>
+            <div class="card-body">
+                <p>Você tem certeza que deseja excluir a carona de <strong>{{ carona.origem }} para {{ carona.destino }}</strong> marcada para <strong>{{ carona.data_hora|date:"d/m/Y H:i" }}</strong>?</p>
+                <p class="text-danger fw-bold">Esta ação não pode ser desfeita.</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Sim, tenho certeza</button>
+                    <a href="{% url 'minhas_caronas' %}" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

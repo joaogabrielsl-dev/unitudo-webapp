@@ -1,0 +1,46 @@
+<!-- templates/moradias/moradia_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Detalhes da Moradia - UniTudo{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h1>{{ moradia.get_tipo_imovel_display }}</h1>
+        <h5 class="text-muted">{{ moradia.endereco }}</h5>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8">
+                <h4>Descrição</h4>
+                <p>{{ moradia.descricao|linebreaksbr }}</p>
+                <hr>
+                <p><strong>Preço:</strong> R$ {{ moradia.preco|floatformat:2 }}</p>
+                <p><strong>Tipo de Contrato:</strong> {{ moradia.get_tipo_contrato_display }}</p>
+                <div class="alert alert-info mt-3">
+                    <strong>{{ moradia.get_tipo_contato_display }}:</strong> {{ moradia.valor_contato }}
+                </div>
+            </div>
+            <div class="col-md-4">
+                {% with fotos=moradia.get_fotos_list %}
+                {% if fotos %}
+                    <h4>Fotos</h4>
+                    {% for foto_url in fotos %}
+                        <img src="{{ foto_url }}" class="img-fluid rounded mb-2" alt="Foto do imóvel">
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <a href="{% url 'moradias_lista' %}" class="btn btn-secondary">Voltar para a lista</a>
+        {% if user == moradia.anunciante %}
+        <div>
+            <a href="{% url 'moradias_editar' moradia.pk %}" class="btn btn-outline-secondary">Editar</a>
+            <a href="{% url 'moradias_excluir' moradia.pk %}" class="btn btn-outline-danger">Excluir Anúncio</a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

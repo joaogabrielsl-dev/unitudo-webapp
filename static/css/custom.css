@@ -1,0 +1,101 @@
+:root {
+    /* Sua nova paleta de cores definida como variáveis CSS */
+    --unitudo-primary: #167f6c;   /* Verde principal (para a navbar, por exemplo) */
+    --unitudo-secondary: #18524b; /* Verde mais escuro (para botões principais) */
+    --unitudo-success: #a8f4d2;   /* Verde claro (para botões de sucesso, talvez) */
+    --bs-body-bg: #f8f9fa;       /* Cor de fundo padrão do Bootstrap Light */
+}
+
+body {
+    background-color: var(--bs-body-bg);
+}
+
+.bg-unitudo-primary {
+    background-color: var(--unitudo-primary) !important;
+}
+
+.btn-primary {
+    background-color: var(--unitudo-secondary);
+    border-color: var(--unitudo-secondary);
+}
+
+.btn-primary:hover {
+    /* Um tom um pouco mais escuro para o efeito de mouse sobre o botão */
+    background-color: #145a4a;
+    border-color: #145a4a;
+}
+
+.btn-success {
+    /* Vamos manter o botão de sucesso com uma cor que contraste bem */
+    background-color: #198754; /* Verde padrão do Bootstrap */
+    border-color: #198754;
+}
+
+/* Você pode ajustar outras cores se quiser */
+.text-muted {
+    color: #6c757d !important;
+}
+
+.rating-stars {
+    cursor: pointer;
+    color: #ccc; /* Cor das estrelas vazias */
+    font-size: 2rem; /* Tamanho das estrelas */
+}
+
+.rating-stars .bi-star-fill {
+    color: #ffc107; /* Cor das estrelas preenchidas (amarelo) */
+}
+
+/* ============================ */
+/* Estilos para Navbar Mobile   */
+/* ============================ */
+
+@media (max-width: 991.98px) {
+    /* Tornamos a div principal um container flexível em coluna */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Alinha todos os itens à esquerda */
+    }
+
+    /* Agora, reordenamos os 'irmãos' diretos */
+    .navbar-greeting {
+        order: 1; /* A saudação vem em primeiro */
+        font-weight: bold;
+        color: white;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória */
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 0.5rem; /* Espaço abaixo */
+    }
+
+    .navbar-nav.me-auto {
+        order: 2; /* A lista de funcionalidades vem em segundo */
+        width: 100%;
+    }
+
+    .navbar-nav.ms-auto {
+        order: 3; /* O botão de sair vem por último */
+        width: 100%;
+        margin-top: 0.5rem; /* Espaço acima */
+        border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória */
+    }
+
+    /* Estilizando o botão de logout para que pareça um link de texto */
+    .navbar-logout-form button.nav-link {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        text-align: left;
+        color: #a8f4d2; /* Cor de destaque para diferenciar */
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .navbar-logout-form button.nav-link:hover {
+        color: white;
+    }
+}

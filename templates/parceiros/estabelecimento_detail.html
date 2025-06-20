@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block title %}{{ estabelecimento.nome }} - UniTudo{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        <h1>{{ estabelecimento.nome }}</h1>
+        <h5 class="text-muted">{{ estabelecimento.get_tipo_display }}</h5>
+    </div>
+    <div class="card-body">
+        {% csrf_token %}
+        <!-- SEÇÃO DE AVALIAÇÃO -->
+        <div class="mb-4">
+            <h4>Avaliações</h4>
+            <div id="average-rating-display" class="d-flex align-items-center">
+                <span class="rating-stars">
+                    <!-- Estrelas da média de avaliações virão aqui via JS -->
+                </span>
+                <span class="ms-2 fw-bold" id="average-rating-value">{{ estabelecimento.average_rating|default_if_none:"0.0" }}</span>
+                <span class="text-muted ms-1" id="total-ratings-count">({{ estabelecimento.avaliacoes.count }} avaliações)</span>
+            </div>
+
+            <hr>
+
+            <h5>Deixe sua avaliação:</h5>
+            <div class="rating-stars" id="user-rating-stars" data-url="{% url 'parceiros_avaliar' estabelecimento.pk %}">
+                {% for i in "12345" %}
+                    <i class="bi bi-star" data-value="{{ i }}"></i>
+                {% endfor %}
+            </div>
+            <small id="rating-feedback" class="form-text text-success mt-2"></small>
+        </div>
+        <!-- FIM DA SEÇÃO DE AVALIAÇÃO -->
+
+        {% with fotos=estabelecimento.get_fotos_list %}
+        {% if fotos %}
+            <h4>Fotos</h4>
+            <div class="row">
+                {% for foto_url in fotos %}
+                <div class="col-md-4 mb-3">
+                    <img src="{{ foto_url }}" alt="Foto de {{ estabelecimento.nome }}" class="img-fluid rounded">
+                </div>
+                {% endfor %}
+            </div>
+            <hr>
+        {% endif %}
+        {% endwith %}
+
+        <h4>Endereço</h4>
+        <p>{{ estabelecimento.endereco }}</p>
+        <a href="{% url 'parceiros_lista' %}" class="btn btn-secondary mt-3">Voltar para a lista</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const userRatingStarsContainer = document.getElementById('user-rating-stars');
+    if (!userRatingStarsContainer) {
+        return; // Sai se o container não existir
+    }
+
+    const stars = userRatingStarsContainer.querySelectorAll('.bi');
+    const feedbackEl = document.getElementById('rating-feedback');
+    const csrfInput = document.querySelector('input[name=csrfmiddlewaretoken]');
+
+    if (!csrfInput) {
+        // CORREÇÃO: Usando backticks (`) para a string, permitindo aspas (") dentro dela.
+        console.error(`ERRO CRÍTICO: Input do token CSRF não encontrado! A tag {% csrf_token %} está faltando ou no lugar errado.`);
+        return;
+    }
+
+    const csrfToken = csrfInput.value;
+
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            const ratingValue = this.dataset.value;
+            feedbackEl.textContent = 'Enviando sua avaliação...';
+            feedbackEl.className = 'form-text text-muted mt-2';
+
+            fetch(userRatingStarsContainer.dataset.url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrfToken
+                },
+                body: JSON.stringify({ nota: ratingValue })
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Falha na requisição com status: ' + response.status);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.sucesso) {
+                    feedbackEl.className = 'form-text text-success mt-2';
+                    feedbackEl.textContent = 'Obrigado por sua avaliação!';
+                    document.getElementById('average-rating-value').textContent = data.nova_media;
+                    document.getElementById('total-ratings-count').textContent = '(' + data.total_avaliacoes + ' avaliações)';
+                    updateAverageStars(data.nova_media);
+                } else {
+                    feedbackEl.className = 'form-text text-danger mt-2';
+                    feedbackEl.textContent = 'Erro: ' + (data.erro || 'Não foi possível processar a avaliação.');
+                }
+            })
+            .catch(error => {
+                console.error('Erro no processo de fetch:', error);
+                feedbackEl.className = 'form-text text-danger mt-2';
+                feedbackEl.textContent = 'Ocorreu um erro de conexão. Tente novamente.';
+            });
+        });
+    });
+
+    function updateAverageStars(average) {
+        const avgContainer = document.querySelector('#average-rating-display .rating-stars');
+        if (avgContainer) {
+            avgContainer.innerHTML = '';
+            const fullStars = Math.floor(average);
+            const halfStar = (average % 1) >= 0.5;
+            for (let i = 0; i < fullStars; i++) {
+                avgContainer.innerHTML += '<i class="bi bi-star-fill"></i>';
+            }
+            if (halfStar) {
+                avgContainer.innerHTML += '<i class="bi bi-star-half"></i>';
+            }
+            const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+            for (let i = 0; i < emptyStars; i++) {
+                avgContainer.innerHTML += '<i class="bi bi-star"></i>';
+            }
+        }
+    }
+
+    const initialAverageElement = document.getElementById('average-rating-value');
+    if (initialAverageElement) {
+        const initialAverage = parseFloat(initialAverageElement.textContent);
+        if (!isNaN(initialAverage)) {
+            updateAverageStars(initialAverage);
+        }
+    }
+});
+</script>
+{% endblock %}
+

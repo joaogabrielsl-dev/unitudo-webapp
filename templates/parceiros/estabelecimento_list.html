@@ -1,0 +1,44 @@
+<!-- templates/parceiros/estabelecimento_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Estabelecimentos Parceiros - UniTudo{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Estabelecimentos Parceiros</h1>
+    <!-- Futuramente, aqui podemos adicionar botões de filtro -->
+</div>
+
+{% if estabelecimentos %}
+    <div class="row">
+        {% for estabelecimento in estabelecimentos %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <!-- Se tivermos fotos, a primeira pode ir aqui -->
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
+                {% with first_foto=estabelecimento.get_first_foto_url %}
+                    {% if first_foto %}
+                        <img src="{{ first_foto }}" class="card-img-top" alt="Foto de {{ estabelecimento.nome }}" style="height: 200px; object-fit: cover;">
+                    {% endif %}
+                {% endwith %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ estabelecimento.nome }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ estabelecimento.get_tipo_display }}</h6>
+                    <p class="card-text">{{ estabelecimento.endereco }}</p>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-star-fill" style="color: #ffc107;"></i>
+                        <span class="ms-1 fw-bold">{{ estabelecimento.average_rating|default_if_none:"Novo" }}</span>
+                        <span class="ms-2 text-muted small">({{ estabelecimento.avaliacoes.count }} avaliações)</span>
+                    </div>
+                    <a href="{% url 'parceiros_detalhe' estabelecimento.pk %}" class="btn btn-primary">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="text-center mt-5">
+        <p class="lead">Nenhum estabelecimento parceiro cadastrado no momento.</p>
+    </div>
+{% endif %}
+{% endblock %}
