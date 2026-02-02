@@ -1,9 +1,9 @@
 name: Build and deploy Python app to Azure Web App - unitudo
 
 on:
-  push:
-    branches:
-      - main
+#  push:
+#   branches:
+#     - main
   workflow_dispatch:
 
 jobs:
